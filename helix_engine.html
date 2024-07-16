@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--HTML document with information pertaining to projects-->
+
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+      <link href="styles.css" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-3.6.3.min.js" type="text/javascript"></script>
+      <title>Projects</title>
+    </head>
+    <body id="projectsBody" style="background-color: black">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a  class="navbar-brand" href="index.html" id="logoLink"><h5 class="logoName">Helix</h5></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasDark" aria-controls="navbarOffcanvasDark" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="navbarOffcanvasDark" aria-labelledby="offcanvasDarkLabel">
+          <div class="offcanvas-header">
+            <h3 class="offcanvas-title logoName" id="offcanvasDarkLabel">Helix</h3>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link header" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link header" aria-current="page" href="projects.html">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active header" href="helix_engine.html">Helix(engine)</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link header" href="updates.html">Update Log</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section> 
+        <form id="frm_main">
+            <div id="firstCarousel" class="carousel slide" data-bs-ride="true" style=" position: absolute; top: 15%; width:70%; left: calc(100%/5);">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#firstCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Initialization settings(Console based)"></button></button>
+                  <button type="button" data-bs-target="#firstCarousel" data-bs-slide-to="1" aria-label="Output after initialization(Console based)"></button></button>
+                  <button type="button" data-bs-target="#firstCarousel" data-bs-slide-to="2" aria-label="Render output 1 (Default shader)"></button></button>
+                  <button type="button" data-bs-target="#firstCarousel" data-bs-slide-to="3" aria-label="Render output 2 (Basic custom shader)"></button></button>
+                  <button type="button" data-bs-target="#firstCarousel" data-bs-slide-to="4" aria-label="Wiring feature on render 1 (Default shader)"></button></button>
+                  <button type="button" data-bs-target="#firstCarousel" data-bs-slide-to="5" aria-label="Wiring feature on render 2(Basic custom shader)"></button></button>
+                  <button type="button" data-bs-target="#firstCarousel" data-bs-slide-to="6" aria-label="Dynamic lighting"></button></button>
+                  <button type="button" data-bs-target="#firstCarousel" data-bs-slide-to="7" aria-label="Specular lighting and materials"></button></button>
+                  <button type="button" data-bs-target="#firstCarousel" data-bs-slide-to="8" aria-label="Reflective material(metal)"></button></button>
+                  <button type="button" data-bs-target="#firstCarousel" data-bs-slide-to="9" aria-label="Static directional light scene"></button></button>
+                  <button type="button" data-bs-target="#firstCarousel" data-bs-slide-to="10" aria-label="Dynamic directional light scene"></button></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="console based selector.JPG" class="d-block w-100" alt="Initialisation console">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Initialisation settings selector</h5>
+                      <p>
+                       I have not yet implemented a GUI for a user to use in selecting desired settings, so for the time being
+                       and for building purposes, I opted to use the console instead. Once things start moving forward, I 
+                       do intend on implementing a GUI using ImGui.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" style="width:100%; height: 100%;">
+                    <img src="console based selector 1.JPG" class="d-block w-100" alt="Initialisation console output">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Initialisation settings output</h5>
+                      <p>The console outputs the desired Initialisation settings afterwards in order to keep you aware
+                        of the settings used to initialize the context window.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" style="width:100%; height: 100%;">
+                    <img src="render fill 1.JPG" class="d-block w-100" alt="Render using default shaders">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Fill render default shaders</h5>
+                      <p>
+                        This is just to show that the program is setup to render something after it 
+                        is initialized, and the default shaders are used in this render
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" style="width:100%; height: 100%;">
+                    <img src="render fill 2 double colour.JPG" class="d-block w-100" alt="Render using custom shaders">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Fill render custom shaders</h5>
+                      <p>
+                        This is just to show that there is multi-colour render functionality.
+                        This was done using 2 different colors on 4 different triangles, if one wanted
+                        they could have a different colour for each triangle.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" style="width:100%; height: 100%;">
+                    <img src="render wire 1.JPG" class="d-block w-100" alt="Wire render using default shaders">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Wiring render default shaders</h5>
+                      <p style="background-color: black;">
+                        The wiring is an option you can toggle while the program is running, 
+                        for the time being and just for testing, the toggle is bound to the W key   
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" style="width:100%; height: 100%;">
+                    <img src="render wire 2 double colour.JPG" class="d-block w-100" alt="Wire render using custom shaders">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Wiring render custom shaders</h5>
+                      <p>
+                        Just as with the default shader, the wiring is an option you can toggle while the 
+                        program is running, for the time and being just for testing, the toggle is bound to the W key 
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" style="width:100%; height: 100%;">
+                    <video width="800" height="600" controls>
+                    <source src = "Dynamic lighting(Helix).mp4" type="video/mp4">
+                    </video>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Dynamic lighting(Single light source)</h5>
+                      <p>
+                        (Click centre to play)
+                        There is flickering in the video because the light can be turned on/off (but I haven't ironed out some kinks).
+                        To play the video, just click in the centre.This video is just to show that there is dynamic lighting. The lighting is done through calculations and is not pre-baked.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" style="width:100%; height: 100%;">
+                    <video width="800" height="600" controls>
+                    <source src = "specular lighting.mp4" type="video/mp4">
+                    </video>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Specular lighting & Lighting for materials(Single light Source)</h5>
+                      <p>
+                        (Click centre to play)
+                        This is to showcase that specular lightiing is now factored into the final rendered image along with material types.
+                        With this particular showcase, the metalic part on the box shines.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" style="width:100%; height: 100%;">
+                    <video width="800" height="600" controls>
+                    <source src = "reflective surface.mp4" type="video/mp4">
+                    </video>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Specular lighting & Lighting for materials 2(Single light Source)</h5>
+                      <p>
+                        (Click centre to play)
+                        This is to showcase that specular lightiing is now factored into the final rendered image along with material types.
+                        With this particular showcase, the object is made of a red metal sheet.
+                      </p>
+                    </div>
+                  </div>
+                  
+
+                  <div class="carousel-item" style="width:100%; height: 100%;">
+                    <video width="800" height="600" controls>
+                    <source src = "sun simulation 1.mp4" type="video/mp4">
+                    </video>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Static directional light(single light)</h5>
+                      <p>
+                        (Click centre to play)
+                        This is to showcase that you can now set light sources to be directional lights instead of spot lights in order to simulate a "Sunlit" scene.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" style="width:100%; height: 100%;">
+                    <video width="800" height="600" controls>
+                    <source src = "Sunlight_simulation.mp4" type="video/mp4">
+                    </video>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Dynamic directional light(Single light source)</h5>
+                      <p>
+                        (Click centre to play)
+                        This is showcase that it is now possible to have a light source move dynamically around the scene in real time. I chose to restrict its  
+                        vertical motion, but it is possible to have it move vertically around the scene as well. If the video seems weird that's because it is,
+                        unfortunately, the original video is too large and I had to cut majority of it out, I tried to find a portion of it that showcased
+                        the light and this was the best I could do, I'll upload the other chunks later in order to provide a better showcase.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#firstCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#firstCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </form>
+        </section>
+    </body>
+</html>
